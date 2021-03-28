@@ -22,7 +22,7 @@ public class Core : MonoBehaviour
     {
         gameObject.AddComponent<Game.Server.NetworkManager>();
         Game.Server.NetworkManager.StartServer();
-        Core.LoadMap(Sceneindex);
+        LoadMap(Sceneindex);
     }
 
     public void JoinGame()
