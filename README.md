@@ -5,7 +5,7 @@ Each branch contains the code corresponding to what you should have at the end o
 
 **Note:** using the console app server in the GameServer project (from any branch) with the GameClient project from branch 6 and up *will produce errors*. This is because after part 5 of the series, we moved the server code into Unity and stopped updating the console server.
 
-**Unity Version: 2018.3.7**
+**Unity Version: 2018.3.7**<br/>
 My HostAndPlay **Unity Version: 2019.4.21f1**
 
 [YouTube Channel](https://tomweiland.net/youtube)\
