@@ -113,7 +113,17 @@ namespace Game.Server
                 SendTCPDataToAll(_packet);
             }
         }
+        public static void PlayerTransform(Player _player)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.playerTransform))
+            {
+                _packet.Write(_player.id);
+                _packet.Write(_player.transform.position);
+                _packet.Write(_player.transform.rotation);
 
+                SendUDPDataToAll(_packet);
+            }
+        }
         public static void LoadMap(int _toClient, int _sceneIndex)
         {
             using (Packet _packet = new Packet((int)ServerPackets.loadMap))

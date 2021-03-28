@@ -299,7 +299,8 @@ namespace Game.Client
                 { (int)ServerPackets.welcome, ClientHandle.Welcome },
                 { (int)ServerPackets.spawnPlayer, ClientHandle.SpawnPlayer },
                 { (int)ServerPackets.playerDisconnected, ClientHandle.PlayerDisconnected },
-                { (int)ServerPackets.loadMap, ClientHandle.LoadMap }
+                { (int)ServerPackets.loadMap, ClientHandle.LoadMap },
+                { (int)ServerPackets.playerTransform, ClientHandle.PlayerTransform }
             };
             Debug.Log("Initialized packets.");
         }

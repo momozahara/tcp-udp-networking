@@ -45,6 +45,21 @@ namespace Game.Client
             int _index = _packet.ReadInt();
 
             Core.LoadMap(_index);
+
+            ClientSend.ReadyToSpawn();
+        }
+
+        public static void PlayerTransform(Packet _packet)
+        {
+            int _id = _packet.ReadInt();
+            Vector3 _position = _packet.ReadVector3();
+            Quaternion _rotation = _packet.ReadQuaternion();
+
+            if (GameManager.players.TryGetValue(_id, out PlayerManager _player))
+            {
+                _player.transform.position = _position;
+                _player.transform.rotation = _rotation;
+            }
         }
     }
 }

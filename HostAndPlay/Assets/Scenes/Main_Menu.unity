@@ -150,6 +150,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 559399fcf63b43249914a2694998ef4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Client_LocalPlayer: {fileID: 921544026810182410, guid: f4a16f1745d98f04c819c465884459d7,
+    type: 3}
+  Client_Player: {fileID: 7664548256655087063, guid: 73134c40c9a8c57498b02ff810dd7bf9,
+    type: 3}
+  Server_LocalPlayer: {fileID: 6481475777490750430, guid: 60b5b20cf52fb6d41b5a29849c4722da,
+    type: 3}
+  Server_Player: {fileID: 836025798183572329, guid: cfdd6cb81c8580a44ab30adb364aec19,
+    type: 3}
 --- !u!4 &237276679
 Transform:
   m_ObjectHideFlags: 0

@@ -53,7 +53,6 @@ namespace Game.Server
                 stream.BeginRead(receiveBuffer, 0, dataBufferSize, ReceiveCallback, null);
 
                 ServerSend.Welcome(id, "Welcome to the server!");
-                Debug.Log(id);
             }
 
             /// <summary>Sends data to the client via TCP.</summary>
@@ -218,7 +217,6 @@ namespace Game.Server
             player = NetworkManager.instance.InstantiatePlayer();
             player.Initialize(id, _playerName);
 
-            /*
             // Send all players to the new player
             foreach (Client _client in Server.clients.Values)
             {
@@ -239,7 +237,6 @@ namespace Game.Server
                     ServerSend.SpawnPlayer(_client.id, player);
                 }
             }
-            */
         }
 
         /// <summary>Disconnects the client and stops all network traffic.</summary>
@@ -249,7 +246,7 @@ namespace Game.Server
 
             ThreadManager.ExecuteOnMainThread(() =>
             {
-                //UnityEngine.Object.Destroy(player.gameObject);
+                UnityEngine.Object.Destroy(player.gameObject);
                 player = null;
             });
 

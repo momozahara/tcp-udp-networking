@@ -13,6 +13,15 @@ namespace Game.Server
         {
             id = _id;
             username = _username;
+
+            if (id == 1)
+            {
+                gameObject.AddComponent<LocalPlayerController>();
+            }
+            else
+            {
+                gameObject.AddComponent<PlayerController>();
+            }
         }
     }
 }

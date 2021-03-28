@@ -29,7 +29,6 @@ namespace Game.Client
             using (Packet _packet = new Packet((int)ClientPackets.welcomeReceived))
             {
                 _packet.Write(Client.instance.myId);
-                _packet.Write("Username");
 
                 SendTCPData(_packet);
             }
@@ -39,6 +38,16 @@ namespace Game.Client
         {
             using (Packet _packet = new Packet((int)ClientPackets.callForMap))
             {
+                SendTCPData(_packet);
+            }
+        }
+
+        public static void ReadyToSpawn()
+        {
+            using (Packet _packet = new Packet((int)ClientPackets.readyToSpawn))
+            {
+                _packet.Write("James");
+
                 SendTCPData(_packet);
             }
         }

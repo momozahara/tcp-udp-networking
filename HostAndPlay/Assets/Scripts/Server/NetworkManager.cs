@@ -9,6 +9,7 @@ namespace Game.Server
         public static NetworkManager instance;
 
         public GameObject playerPrefab;
+        public GameObject localPlayerPrefab;
 
         private void Awake()
         {
@@ -36,6 +37,10 @@ namespace Game.Server
         public Player InstantiatePlayer()
         {
             return Instantiate(playerPrefab, new Vector3(0f, 0.5f, 0f), Quaternion.identity).GetComponent<Player>();
+        }
+        public Player InstantiateLocalPlayer()
+        {
+            return Instantiate(localPlayerPrefab, new Vector3(0f, 0.5f, 0f), Quaternion.identity).GetComponent<Player>();
         }
     }
 }

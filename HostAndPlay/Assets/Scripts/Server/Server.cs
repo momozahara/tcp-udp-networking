@@ -48,10 +48,13 @@ namespace Game.Server
 
             for (int i = 1; i <= MaxPlayers; i++)
             {
-                if (clients[i].tcp.socket == null)
+                if (i != 1)
                 {
-                    clients[i].tcp.Connect(_client);
-                    return;
+                    if (clients[i].tcp.socket == null)
+                    {
+                        clients[i].tcp.Connect(_client);
+                        return;
+                    }
                 }
             }
 
@@ -127,7 +130,8 @@ namespace Game.Server
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
                 { (int)ClientPackets.welcomeReceived, ServerHandle.WelcomeReceived },
-                { (int)ClientPackets.callForMap, ServerHandle.CallForMap }
+                { (int)ClientPackets.callForMap, ServerHandle.CallForMap },
+                { (int)ClientPackets.readyToSpawn, ServerHandle.ReadyToSpawn }
             };
             Debug.Log("Initialized packets.");
         }
