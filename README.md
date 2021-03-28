@@ -1,11 +1,11 @@
 # C# Networking Tutorial Series
-This is the source code for my [C# networking tutorial series](https://www.youtube.com/playlist?list=PLXkn83W0QkfnqsK8I0RAz5AbUxfg3bOQ5) on YouTube.
+This is the source code for Tom Weiland [C# networking tutorial series](https://www.youtube.com/playlist?list=PLXkn83W0QkfnqsK8I0RAz5AbUxfg3bOQ5) on YouTube.
 
 Each branch contains the code corresponding to what you should have at the end of the associated video. For example, the code you have after watching part 5 of the series should match the code in the tutorial-part5 branch.
 
 **Note:** using the console app server in the GameServer project (from any branch) with the GameClient project from branch 6 and up *will produce errors*. This is because after part 5 of the series, we moved the server code into Unity and stopped updating the console server.
 
-**Unity Version: 2018.3.7**<br/>
+[Tom Weiland](https://github.com/tom-weiland) Original **Unity Version: 2018.3.7**\
 My([momozahara](https://github.com/momozahara)) HostAndPlay **Unity Version: 2019.4.21f1**
 
 [YouTube Channel](https://tomweiland.net/youtube)\
